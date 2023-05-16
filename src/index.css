@@ -103,3 +103,66 @@ ul {
 .search-component input::placeholder {
   color: gray;
 }
+
+/* champ contaner  */
+
+.champ-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.champ-container {
+ padding: 0 70px;
+}
+
+.champ-info {
+  padding: 30px;
+}
+
+.champ-info p {
+  color: rgb(141, 141, 141);
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.champ-info img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.details {
+  width: 150px;
+  padding: 5px 0;
+  color: white;
+  font-size: 15px;
+}
+
+.details h2 {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* radio */
+
+.champ-role {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #364b56;
+  width: 100%;
+  height: 80px;
+  accent-color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.form-control {
+  padding: 0 40px;
+  font-size: 25px;
+  font-weight: bold;
+  grid-template-columns: 1em auto;
+  display: grid;
+  gap: 0.5em;
+}
