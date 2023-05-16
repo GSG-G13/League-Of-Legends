@@ -1,13 +1,105 @@
-body {
+/* Start Global Rules */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* CSS Variables */
+:root {
+  --main-color: #1a2931;
+  --primary-color: #dcc443;
+  --sec-color: #0084c3;
+  --main-duration: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.landing-component {
+  padding: 30px 0;
+}
+
+.landing-component video {
+  width: 80%;
+  height: 460px;
+  margin-left: 100px;
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.search-component {
+  padding: 20px 0;
+}
+
+.search-component .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-component .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.search-component input {
+  width: 320px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-bottom: 1px solid var(--primary-color);
+  caret-color: var(--primary-color);
+  color: #fff;
+  margin-left: 60px;
+}
+
+.search-component input::placeholder {
+  color: gray;
 }
