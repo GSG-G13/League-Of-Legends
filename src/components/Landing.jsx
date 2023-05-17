@@ -13,7 +13,7 @@ class Landing extends Component {
     return (
       <div className="landing-component">
         <div className="container">
-          <video ref={this.videoRef} autoPlay loop>
+          <video ref={this.videoRef} loop>
             <source src={lol} type="video/mp4" />
           </video>
         </div>

@@ -1,98 +1,64 @@
 import React, { Component } from "react";
-import thresh from "../img/thresh.jpg";
+import getData from "../utils/getData";
+import loading from "../img/loading-gif.gif";
 
 export class ChampList extends Component {
+  
+
+  state = {
+    champs: []
+  };
+
+  componentDidMount() {
+    getData()
+      .then((data) => Object.values(data.data))
+      .then((list) => this.setState({champs:list}))
+      .catch((err) => console.error(err));
+  }
+
   render() {
     return (
       <>
         <div className="champ-role">
-          <label class="form-control">
+          <label className="form-control">
             <input type="radio" name="radio" />
             Tank
           </label>
 
-          <label class="form-control">
+          <label className="form-control">
             <input type="radio" name="radio" />
             Support
           </label>
 
-          <label class="form-control">
+          <label className="form-control">
             <input type="radio" name="radio" />
             Mid
           </label>
 
-          <label class="form-control">
+          <label className="form-control">
             <input type="radio" name="radio" />
             Adc
           </label>
 
-          <label class="form-control">
+          <label className="form-control">
             <input type="radio" name="radio" />
             Jungle
           </label>
         </div>
         <div className="champ-container">
-          <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div>
-
-          <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div> <div className="champ-info">
-            <img src={thresh} alt="" />
-            <div className="details">
-              <h3>Thresh</h3>
-            </div>
-          </div>
-
-
-
+          {this.state.champs || this.state.champs > 0 ?( this.state.champs.map((champ) => {
+            let imgName = champ.image.full;
+            let x = imgName.slice(0, imgName.length - 4);
+            let path = x + '_0.jpg';
+            return (
+              <div className="champ-info" key={champ.id}>
+                <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${path}`} alt="champ" />
+                <div className="details">
+                  <h3>{champ.name}</h3>
+                </div>
+              </div>
+            );
+          })) : <img src={loading} alt="loading" className="loading" />}
         </div>
       </>
     );
