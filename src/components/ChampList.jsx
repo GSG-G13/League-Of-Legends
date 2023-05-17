@@ -10,32 +10,6 @@ export class ChampList extends Component {
     const {champs} = this.props
     return (
       <>
-        <div className="champ-role">
-          <label className="form-control">
-            <input type="radio" name="radio" />
-            Tank
-          </label>
-
-          <label className="form-control">
-            <input type="radio" name="radio" />
-            Support
-          </label>
-
-          <label className="form-control">
-            <input type="radio" name="radio" />
-            Mid
-          </label>
-
-          <label className="form-control">
-            <input type="radio" name="radio" />
-            Adc
-          </label>
-
-          <label className="form-control">
-            <input type="radio" name="radio" />
-            Jungle
-          </label>
-        </div>
         <div className="champ-container">
           {champs || champs.length > 0 ?( champs.map((champ) => {
             let imgName = champ.image.full;
