@@ -121,12 +121,6 @@ ul {
   padding: 30px;
 }
 
-.champ-info p {
-  color: rgb(141, 141, 141);
-  padding-top: 10px;
-  font-size: 12px;
-}
-
 .champ-info img {
   width: 150px;
   border-radius: 20px;
@@ -136,12 +130,11 @@ ul {
   width: 150px;
   padding: 5px 0;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .details h2 {
   padding-bottom: 3px;
-  border-bottom: 2px solid var(--primary-color);
 }
 
 /* radio */

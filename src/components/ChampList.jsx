@@ -35,13 +35,59 @@ export class ChampList extends Component {
           <div className="champ-info">
             <img src={thresh} alt="" />
             <div className="details">
-              <h2>Thresh</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Suscipit deserunt inventore enim, ad similique, alias
-                necessitatibus vel id debitis reprehenderit illum. Saepe fugiat
-                distinctio quos, perferendis dolorum soluta accusamus dolor.
-              </p>
+              <h3>Thresh</h3>
+            </div>
+          </div>
+
+          <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
+            </div>
+          </div> <div className="champ-info">
+            <img src={thresh} alt="" />
+            <div className="details">
+              <h3>Thresh</h3>
             </div>
           </div>
 
