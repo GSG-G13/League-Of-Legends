@@ -1,22 +1,13 @@
 import React, { Component } from "react";
-import getData from "../utils/getData";
 import loading from "../img/loading-gif.gif";
 
 export class ChampList extends Component {
-  
 
-  state = {
-    champs: []
-  };
 
-  componentDidMount() {
-    getData()
-      .then((data) => Object.values(data.data))
-      .then((list) => this.setState({champs:list}))
-      .catch((err) => console.error(err));
-  }
 
   render() {
+
+    const {champs} = this.props
     return (
       <>
         <div className="champ-role">
@@ -46,7 +37,7 @@ export class ChampList extends Component {
           </label>
         </div>
         <div className="champ-container">
-          {this.state.champs || this.state.champs > 0 ?( this.state.champs.map((champ) => {
+          {champs || champs.length > 0 ?( champs.map((champ) => {
             let imgName = champ.image.full;
             let x = imgName.slice(0, imgName.length - 4);
             let path = x + '_0.jpg';
