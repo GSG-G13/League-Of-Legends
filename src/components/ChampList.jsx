@@ -46,7 +46,7 @@ export class ChampList extends Component {
           </label>
         </div>
         <div className="champ-container">
-          {this.state.champss || this.state.champs > 0 ?( this.state.champs.map((champ) => {
+          {this.state.champs || this.state.champs > 0 ?( this.state.champs.map((champ) => {
             let imgName = champ.image.full;
             let x = imgName.slice(0, imgName.length - 4);
             let path = x + '_0.jpg';
