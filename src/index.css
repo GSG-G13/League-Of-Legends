@@ -104,7 +104,7 @@ ul {
   color: gray;
 }
 
-/* champ contaner  */
+/* champ container  */
 
 .champ-container {
   display: flex;
@@ -114,7 +114,7 @@ ul {
 }
 
 .champ-container {
- padding: 0 70px;
+  padding: 0 70px;
 }
 
 .champ-info {
@@ -124,6 +124,11 @@ ul {
 .champ-info img {
   width: 150px;
   border-radius: 20px;
+  transition: var(--main-duration);
+}
+
+.champ-info img:hover {
+  transform: scale(1.05);
 }
 
 .details {
@@ -158,4 +163,9 @@ ul {
   grid-template-columns: 1em auto;
   display: grid;
   gap: 0.5em;
+}
+
+.loading {
+  width: 90px;
+  margin: 40px 0;
 }
